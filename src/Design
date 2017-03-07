@@ -1,0 +1,24 @@
+Data class
+    Priority Queue of customers -> mimicking max heap  -> Deleting tends to be O(n)(search and delete) in java . Long term can be replaced with
+    custom pririty queue solution with a map determining if it is valid or not and invalid implying deleted/
+    TreeSet of Events
+    TreeSet of Site Visits
+    TreeSet of orders
+    TreeSet of image uploads
+
+            Maintain a MaxHeap of Customers based on Customer lifetime value
+
+EventAnalyzer
+    Consumes events and updates the appropriate data structure,
+    returns top X Customers
+
+Using Factory method design pattern to create event objects
+
+Customer
+    LTV
+    a - average customer value per week based on visits and expenditures
+
+//A week is considered as 7 days following the creation of the customer object.  So, someone who become a customer
+// on 01/01/2017 and visited site on 01/01/2017 and 01/03/2017, then site visits per week(01/01/2017 to 01/08/2017) will be 2
+// Site visits per week for 01/01/2017 to 01/15/2017 if the customer did not visit the site the 2nd week will be 1
+
